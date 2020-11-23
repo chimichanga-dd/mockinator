@@ -99,7 +99,6 @@ let  getRandomValue = (value) => {
   //   return ['temp']
   // }
 
-  console.log("made it to the end oops")
   return "asdb"
 }
 
@@ -129,24 +128,20 @@ const recursiveLoop = (input, key, previousInput) => {
   //   // getRandomValue(input)
   // }
 
-  // no arrays right now
+  // no arrays right now ? might need this for handling full name before first name
 
-  console.log(input)
+
+  let modifiedInput = JSON.stringify(input)
 
   for(const [key, value] of Object.entries(input)){
-    console.log(key, value)
       let newValue = getRandomValue(value)
-      input[key] = newValue
+      const regex = new RegExp(`${value}`, 'gi');
+      modifiedInput = modifiedInput.replace(regex, `${newValue}`)
   }
 
-  return input
+  return JSON.parse(modifiedInput)
 
 }
-
-// {
-//   "firstName": "David"
-//   // "testArray": ["123", "567"]
-// }
 
 const mockinate = (json) => {
   const result = recursiveLoop(json)
