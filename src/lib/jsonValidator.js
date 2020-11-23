@@ -7,6 +7,8 @@ const isJson = (json) => {
       }
 }
 
+//function
+
 module.exports = {
     isJson
 }
