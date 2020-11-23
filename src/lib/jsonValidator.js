@@ -1,13 +1,11 @@
 const isJson = (json) => {
     try {
-        return JSON.parse(json).result
+        return JSON.parse(json)
       } catch (error) {
         console.error(error);
         return false
       }
 }
-
-//function
 
 module.exports = {
     isJson
