@@ -58,6 +58,10 @@ const Home = () => {
       setOutput(JSON.stringify(newObj, null, 1))
     }
   }
+  const doNothing = (e) => {
+    e.preventDefault()
+    return undefined
+  }
 
     return (
       <div className={classes.pageContainer}>
@@ -73,7 +77,7 @@ const Home = () => {
           <div className={classes.buttonContainer}>
             <Button color='green' type = 'submit' disabled= {disabledMock}>Mock</Button>
             <Icon name={`long arrow alternate ${viewportWidth <= 576 ? 'down' : 'right'}`} size='huge' />
-            <Button color='green' basic>Reset</Button>
+            <Button color='green' basic onClick={e => doNothing(e)}>Reset</Button>
           </div>
           <div className={classes.textAreaContainer}>
             <label>JSON Output</label>
