@@ -1,25 +1,18 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { Form, Button, TextArea, Icon } from 'semantic-ui-react'
+import classes from './CSS/Main.module.css'
 
-// testing repo rename
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="yeet" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.pageContainer}>
+      <Form className={classes.form}>
+         <TextArea style={{ width: '30%', resize: 'none' }} />
+        <div className={classes.buttonContainer}>
+          <Button color='green' className={classes.button}>Mock</Button>
+          <Icon name='long arrow alternate right' size='huge' />
+          <Button color='green' basic className={classes.button}>Reset</Button>
+        </div>
+         <TextArea style={{ width: '30%', resize: 'none' }} />
+      </Form>
     </div>
   );
 }
