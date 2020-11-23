@@ -94,10 +94,10 @@ let  getRandomValue = (value) => {
 
 
 
-  if (value.isArray()){
-    console.log('we hit the array')
-    return ['temp']
-  }
+  // if (value.isArray()){
+  //   console.log('we hit the array')
+  //   return ['temp']
+  // }
 
   console.log("made it to the end oops")
   return "asdb"
@@ -148,14 +148,8 @@ const recursiveLoop = (input, key, previousInput) => {
 //   // "testArray": ["123", "567"]
 // }
 
-const mockinate = (array) => {
-
-  if (array.length === 0) {
-    return []
-  }
-
-  let firstObject = array[0]
-  let result = recursiveLoop(firstObject)
+const mockinate = (json) => {
+  const result = recursiveLoop(json)
   return result
 
 }

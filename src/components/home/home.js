@@ -10,6 +10,7 @@ const Home = () => {
   const [input, setInput] = useState(undefined)
   const [output, setOutput] = useState(undefined)
   const [disabledMock, setDisabledMock] = useState(true)
+  const [json, setJson] = useState(undefined)
 
   const handleResize = (e) => {
     setViewportWidth(window.innerWidth)
@@ -39,12 +40,23 @@ const Home = () => {
 
   const handleInput = () => {
     if (input) {
-      isJson(input) ? setDisabledMock(false) : setDisabledMock(true)
+      const jsonResult = isJson(input)
+      if (jsonResult) {
+        setDisabledMock(false)
+        setJson(jsonResult)
+      } else {
+        setDisabledMock(true)
+        setJson(undefined)
+      } 
     }
   }
   const handleChange = (e, { name }) => set(name)(e.target.value)
   const handleSubmit = () => {
-    //mockObjects(input)
+    console.log(json, typeof json, 'json')
+    const newObj = mockinate(json)
+    if (newObj) {
+      setOutput(JSON.stringify(newObj))
+    }
   }
 
     return (
