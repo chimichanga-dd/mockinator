@@ -1,9 +1,9 @@
-.pageContainer {
+.app {
   height: 100vh;
   padding: 5px;
 }
 
 .body {
-  height: 100vh;
+  height: 100%;
 }
 
