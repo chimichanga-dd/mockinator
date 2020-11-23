@@ -1,5 +1,5 @@
-import React from './node_modules/react'
-import { Form, Button, TextArea, Icon} from './node_modules/semantic-ui-react'
+import React from 'react'
+import { Form, Button, TextArea, Icon} from 'semantic-ui-react'
 import classes from './home.module.css'
 // adding comment
 

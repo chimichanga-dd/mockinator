@@ -1,9 +1,9 @@
 import Home from './components/home/home'
-import classes from './App.css'
+import './App.css'
 
 const App = () => {
   return (
-    <div className={classes.pageContainer}>
+    <div className='pageContainer'>
       <Home />
     </div>
   );
