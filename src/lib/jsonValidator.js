@@ -1,0 +1,7 @@
+const isJson = () => {
+
+}
+
+export {
+    isJson
+}
