@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { Form, Button, TextArea, Icon} from 'semantic-ui-react'
 import classes from './home.module.css'
 import { isJson } from '../../lib/jsonValidator'
-import {Mockinate} from  "../../lib/jsonMocker"
+import {mockinate} from  "../../lib/jsonMocker"
 
 const Home = () => {
 

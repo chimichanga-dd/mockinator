@@ -148,7 +148,7 @@ const recursiveLoop = (input, key, previousInput) => {
 //   // "testArray": ["123", "567"]
 // }
 
-const Mockinate = (array) => {
+const mockinate = (array) => {
 
   if (array.length === 0) {
     return []
@@ -162,8 +162,8 @@ const Mockinate = (array) => {
 
 console.log("entered mockinate")
 
-window.Mockinate = Mockinate
+window.mockinate = mockinate
 
 module.exports = {
-  mockinate : Mockinate
+  mockinate
 }
