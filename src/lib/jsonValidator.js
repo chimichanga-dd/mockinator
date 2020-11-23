@@ -1,7 +1,12 @@
-const isJson = () => {
-
+const isJson = (json) => {
+    try {
+        return JSON.parse(json).result
+      } catch (error) {
+        console.error(error);
+        return false
+      }
 }
 
-export {
+module.exports = {
     isJson
 }
