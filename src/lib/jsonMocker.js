@@ -133,7 +133,7 @@ const recursiveLoop = (input, key, previousInput) => {
 
   console.log(input)
 
-  for(const [key, value] in input){
+  for(const [key, value] of Object.entries(input)){
     console.log(key, value)
       let newValue = getRandomValue(value)
       input[key] = newValue
