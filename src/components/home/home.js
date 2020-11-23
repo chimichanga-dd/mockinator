@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { Form, Button, TextArea, Icon} from 'semantic-ui-react'
 import classes from './home.module.css'
 import { isJson } from '../../lib/jsonValidator'
+import {Mockinate} from  "../../lib/jsonMocker"
 
 const Home = () => {
 
@@ -51,7 +52,7 @@ const Home = () => {
           <Form className={classes.form} onSubmit={() => handleSubmit()}>
           <div className={classes.textAreaContainer}>
             <label>JSON Input</label>
-            <TextArea 
+            <TextArea
               name = 'input'
               value={input}
               onChange={handleChange}
