@@ -1,6 +1,8 @@
 import React from 'react'
 import { Form, Button, TextArea, Icon} from 'semantic-ui-react'
 
+// adding comment
+
 const Home = () => {
     return (
         <Form className={classes.form}>
