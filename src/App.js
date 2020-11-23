@@ -1,5 +1,6 @@
 import Home from './components/home/home'
 import Header from './components/shared/header'
+import Footer from './components/shared/footer'
 import './App.css'
 
 const App = () => {
@@ -10,6 +11,9 @@ const App = () => {
       </div>
       <div className='body'>
         <Home />
+      </div>
+      <div className='footer'>
+        <Footer />
       </div>
     </div>
   );
