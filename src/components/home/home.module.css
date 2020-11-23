@@ -1,0 +1,24 @@
+.textAreaContainer {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button {
+
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
