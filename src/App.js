@@ -1,5 +1,5 @@
-import Home from './Components/Home/Home'
-import classes from './CSS/Main.module.css'
+import Home from './components/home/home'
+import classes from './App.css'
 
 const App = () => {
   return (
