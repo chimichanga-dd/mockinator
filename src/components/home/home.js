@@ -55,7 +55,7 @@ const Home = () => {
     console.log(json, typeof json, 'json')
     const newObj = mockinate(json)
     if (newObj) {
-      setOutput(JSON.stringify(newObj))
+      setOutput(JSON.stringify(newObj, null, 1))
     }
   }
 
