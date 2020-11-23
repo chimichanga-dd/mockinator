@@ -9,7 +9,7 @@ const Footer = () => {
             textAlign: "center",
             color: "#9e9ec9"
             }}>Bird icon courtesy of <a
-              href="icons8.com"
+              href="https://www.icons8.com"
               target="_blank"
               style={{color: "#9e9ec9"}}
               >icons8.com</a>
