@@ -105,8 +105,6 @@ let  getRandomValue = (value) => {
 
 const recursiveLoop = (input, key, previousInput) => {
 
-  let newValue
-
   // if ( JSONValidator.isJson(input)  && JSONValidator.isJson(value) !== null){
   //   for(const [key, value] in input){
   //     console.log("about to enter recursive loop")
@@ -115,21 +113,33 @@ const recursiveLoop = (input, key, previousInput) => {
   //   }
   // }
 
-  if (input.isArray()) {
-    for(let i = 0; i  < input.length; i++){
-      console.log("about to enter random value")
-      input[i] = getRandomValue(input[i])
-    }
-  } else if () { // check if object
-    for(const [key, value] in input){
-      console.log("about to enter recursive loop")
-      newValue = getRandomValue(value)
+  // if (input.isArray()) {
+  //   for(let i = 0; i  < input.length; i++){
+  //     console.log("about to enter random value")
+  //     input[i] = getRandomValue(input[i])
+  //   }
+  // } else if (JSONValidator.isJson(input)) { // check if object
+  //   for(const [key, value] in input){
+  //     console.log("about to enter recursive loop")
+  //     newValue = getRandomValue(value)
+  //     input[key] = newValue
+  //   }
+  // } else {
+  //   console.log("entered else in recursive")
+  //   // getRandomValue(input)
+  // }
+
+  // no arrays right now
+
+  console.log(input)
+
+  for(const [key, value] in input){
+    console.log(key, value)
+      let newValue = getRandomValue(value)
       input[key] = newValue
-    }
-  } else {
-    console.log("entered else in recursive")
-    // getRandomValue(input)
   }
+
+  return input
 
 }
 
