@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { Form, Button, TextArea, Icon} from 'semantic-ui-react'
 import classes from './home.module.css'
 import { isJson } from '../../lib/jsonValidator'
-import {mockinate} from  "../../lib/jsonMocker"
+import Mockinate from  "../../lib/jsonMocker"
 
 const Home = () => {
 
@@ -47,13 +47,13 @@ const Home = () => {
       } else {
         setDisabledMock(true)
         setJson(undefined)
-      } 
+      }
     }
   }
   const handleChange = (e, { name }) => set(name)(e.target.value)
   const handleSubmit = () => {
     console.log(json, typeof json, 'json')
-    const newObj = mockinate(json)
+    const newObj = Mockinate(json)
     if (newObj) {
       setOutput(JSON.stringify(newObj, null, 1))
     }

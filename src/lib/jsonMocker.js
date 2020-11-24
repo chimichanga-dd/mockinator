@@ -143,16 +143,12 @@ const recursiveLoop = (input, key, previousInput) => {
 
 }
 
-const mockinate = (json) => {
+export  default function (json) {
   const result = recursiveLoop(json)
   return result
 
 }
 
-console.log("entered mockinate")
-
-window.mockinate = mockinate
-
-module.exports = {
-  mockinate
-}
+// module.exports = {
+//   mockinate
+// }
